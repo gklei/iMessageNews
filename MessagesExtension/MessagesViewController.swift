@@ -18,31 +18,8 @@ class MessagesViewController: MSMessagesAppViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		let tech = "https://www.wired.com/category/gear/feed/"
-		let news = "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
-		let sports = "https://www.espn.com/espn/rss/news"
-		let funny = "https://www.dailyhaha.com/rss/pictures/"
-		
-//		let url2 = "http://images.apple.com/main/rss/hotnews/hotnews.rss"
-		
-		
-//		let url = URL(string: sports)
-//		feedParser = MWFeedParser(feedURL: url)
-//		feedParser.delegate = self
-//		feedParser.feedParseType = ParseTypeFull
-//		
-//		feedParser.parse()
-		
-		let url = "http://rss.cnn.com/rss/cnn_topstories.rss"
-		
-		Alamofire.request(sports).responseRSS() { (response) -> Void in
-			if let feed: RSSFeed = response.result.value {
-				//do something with your new RSSFeed object!
-				for item in feed.items {
-					print(item)
-				}
-			}
-		}
+		automaticallyAdjustsScrollViewInsets = false
+		_collectionView.collectionViewLayout = RSSFeedsCompactLayout()
 	}
 	
 	override func didReceiveMemoryWarning() {
@@ -87,26 +64,33 @@ class MessagesViewController: MSMessagesAppViewController {
 	}
 	
 	override func willTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
-		// Called before the extension transitions to a new presentation style.
-		
-		// Use this method to prepare for the change in presentation style.
+		switch presentationStyle {
+		case .expanded:
+			_collectionView.setCollectionViewLayout(RSSFeedsExpandedLayout(), animated: true)
+		case .compact:
+			_collectionView.setCollectionViewLayout(RSSFeedsCompactLayout(), animated: true)
+		}
 	}
 	
 	override func didTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
-		// Called after the extension transitions to a new presentation style.
-		
-		// Use this method to finalize any behaviors associated with the change in presentation style.
+		_collectionView.contentInset = UIEdgeInsets.zero
+		_collectionView.contentOffset = CGPoint.zero
 	}
 }
 
 extension MessagesViewController: UICollectionViewDataSource {
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return 3
+		return 6
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellReuseID", for: indexPath)
 		cell.contentView.backgroundColor = .red
 		return cell
+	}
+}
+
+extension MessagesViewController: UICollectionViewDelegate {
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 	}
 }

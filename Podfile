@@ -6,7 +6,6 @@ target 'MessagesExtension' do
   use_frameworks!
 
   # Pods for MessagesExtension
-  pod 'MWFeedParser'
   pod 'AlamofireRSSParser'
 
 end

@@ -1,0 +1,541 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C5DBF39E8DC6B8B7445D810 /* Pods_MessagesExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E9CFDEA4208DC03E9DF70CE /* Pods_MessagesExtension.framework */; };
+		CE67DD6C1DA6C7BE00F86634 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE67DD6B1DA6C7BE00F86634 /* Assets.xcassets */; };
+		CE67DD731DA6C7BE00F86634 /* MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CE67DD721DA6C7BE00F86634 /* MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CE67DD781DA6C7BE00F86634 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE67DD771DA6C7BE00F86634 /* Messages.framework */; };
+		CE67DD7B1DA6C7BE00F86634 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67DD7A1DA6C7BE00F86634 /* MessagesViewController.swift */; };
+		CE67DD7E1DA6C7BE00F86634 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE67DD7C1DA6C7BE00F86634 /* MainInterface.storyboard */; };
+		CE67DD801DA6C7BE00F86634 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE67DD7F1DA6C7BE00F86634 /* Assets.xcassets */; };
+		E8C772B945F4761B37D20196 /* Pods_RSSMessage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D5F44CC794E232E8F38D6B /* Pods_RSSMessage.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE67DD741DA6C7BE00F86634 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE67DD621DA6C7BE00F86634 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE67DD711DA6C7BE00F86634;
+			remoteInfo = MessagesExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CE67DD871DA6C7BE00F86634 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CE67DD731DA6C7BE00F86634 /* MessagesExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		10D5F44CC794E232E8F38D6B /* Pods_RSSMessage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSSMessage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		464393577D69A6249B7E5026 /* Pods-RSSMessage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSSMessage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSSMessage/Pods-RSSMessage.debug.xcconfig"; sourceTree = "<group>"; };
+		4E9CFDEA4208DC03E9DF70CE /* Pods_MessagesExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessagesExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FC12D7B79EC91EE07617A3D /* Pods-RSSMessage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSSMessage.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSSMessage/Pods-RSSMessage.release.xcconfig"; sourceTree = "<group>"; };
+		BE249B642FE7A22A9A982E26 /* Pods-MessagesExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessagesExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-MessagesExtension/Pods-MessagesExtension.release.xcconfig"; sourceTree = "<group>"; };
+		CE67DD681DA6C7BE00F86634 /* RSSMessage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSMessage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE67DD6B1DA6C7BE00F86634 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE67DD6D1DA6C7BE00F86634 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE67DD721DA6C7BE00F86634 /* MessagesExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MessagesExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE67DD771DA6C7BE00F86634 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		CE67DD7A1DA6C7BE00F86634 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		CE67DD7D1DA6C7BE00F86634 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		CE67DD7F1DA6C7BE00F86634 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE67DD811DA6C7BE00F86634 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCABB0C757840D783E0BBB1E /* Pods-MessagesExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessagesExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MessagesExtension/Pods-MessagesExtension.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE67DD6F1DA6C7BE00F86634 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE67DD781DA6C7BE00F86634 /* Messages.framework in Frameworks */,
+				0C5DBF39E8DC6B8B7445D810 /* Pods_MessagesExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA20A4AE8ADFA12CC65A3DAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8C772B945F4761B37D20196 /* Pods_RSSMessage.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		93232E8E430C1FC7CCAB9A5A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DCABB0C757840D783E0BBB1E /* Pods-MessagesExtension.debug.xcconfig */,
+				BE249B642FE7A22A9A982E26 /* Pods-MessagesExtension.release.xcconfig */,
+				464393577D69A6249B7E5026 /* Pods-RSSMessage.debug.xcconfig */,
+				9FC12D7B79EC91EE07617A3D /* Pods-RSSMessage.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CE67DD611DA6C7BE00F86634 = {
+			isa = PBXGroup;
+			children = (
+				CE67DD6A1DA6C7BE00F86634 /* RSSMessage */,
+				CE67DD791DA6C7BE00F86634 /* MessagesExtension */,
+				CE67DD761DA6C7BE00F86634 /* Frameworks */,
+				CE67DD691DA6C7BE00F86634 /* Products */,
+				93232E8E430C1FC7CCAB9A5A /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		CE67DD691DA6C7BE00F86634 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE67DD681DA6C7BE00F86634 /* RSSMessage.app */,
+				CE67DD721DA6C7BE00F86634 /* MessagesExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE67DD6A1DA6C7BE00F86634 /* RSSMessage */ = {
+			isa = PBXGroup;
+			children = (
+				CE67DD6B1DA6C7BE00F86634 /* Assets.xcassets */,
+				CE67DD6D1DA6C7BE00F86634 /* Info.plist */,
+			);
+			path = RSSMessage;
+			sourceTree = "<group>";
+		};
+		CE67DD761DA6C7BE00F86634 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE67DD771DA6C7BE00F86634 /* Messages.framework */,
+				4E9CFDEA4208DC03E9DF70CE /* Pods_MessagesExtension.framework */,
+				10D5F44CC794E232E8F38D6B /* Pods_RSSMessage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE67DD791DA6C7BE00F86634 /* MessagesExtension */ = {
+			isa = PBXGroup;
+			children = (
+				CE67DD7A1DA6C7BE00F86634 /* MessagesViewController.swift */,
+				CE67DD7C1DA6C7BE00F86634 /* MainInterface.storyboard */,
+				CE67DD7F1DA6C7BE00F86634 /* Assets.xcassets */,
+				CE67DD811DA6C7BE00F86634 /* Info.plist */,
+			);
+			path = MessagesExtension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE67DD671DA6C7BE00F86634 /* RSSMessage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE67DD881DA6C7BE00F86634 /* Build configuration list for PBXNativeTarget "RSSMessage" */;
+			buildPhases = (
+				6475240E4DF1E8BB99BF572F /* [CP] Check Pods Manifest.lock */,
+				CE67DD661DA6C7BE00F86634 /* Resources */,
+				CE67DD871DA6C7BE00F86634 /* Embed App Extensions */,
+				DA20A4AE8ADFA12CC65A3DAD /* Frameworks */,
+				F3455B9D73CD94EA73CF67D7 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE67DD751DA6C7BE00F86634 /* PBXTargetDependency */,
+			);
+			name = RSSMessage;
+			productName = RSSMessage;
+			productReference = CE67DD681DA6C7BE00F86634 /* RSSMessage.app */;
+			productType = "com.apple.product-type.application.messages";
+		};
+		CE67DD711DA6C7BE00F86634 /* MessagesExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE67DD841DA6C7BE00F86634 /* Build configuration list for PBXNativeTarget "MessagesExtension" */;
+			buildPhases = (
+				C192B9E935FA7077FCFA3333 /* [CP] Check Pods Manifest.lock */,
+				CE67DD6E1DA6C7BE00F86634 /* Sources */,
+				CE67DD6F1DA6C7BE00F86634 /* Frameworks */,
+				CE67DD701DA6C7BE00F86634 /* Resources */,
+				D9844954B8F461A50FCFB3EB /* [CP] Copy Pods Resources */,
+				7DE32954E220010BBBFE204F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MessagesExtension;
+			productName = MessagesExtension;
+			productReference = CE67DD721DA6C7BE00F86634 /* MessagesExtension.appex */;
+			productType = "com.apple.product-type.app-extension.messages";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE67DD621DA6C7BE00F86634 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Incipia;
+				TargetAttributes = {
+					CE67DD671DA6C7BE00F86634 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 49BYD5B64K;
+						ProvisioningStyle = Automatic;
+					};
+					CE67DD711DA6C7BE00F86634 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 49BYD5B64K;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CE67DD651DA6C7BE00F86634 /* Build configuration list for PBXProject "RSSMessage" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE67DD611DA6C7BE00F86634;
+			productRefGroup = CE67DD691DA6C7BE00F86634 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE67DD671DA6C7BE00F86634 /* RSSMessage */,
+				CE67DD711DA6C7BE00F86634 /* MessagesExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE67DD661DA6C7BE00F86634 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE67DD6C1DA6C7BE00F86634 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE67DD701DA6C7BE00F86634 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE67DD801DA6C7BE00F86634 /* Assets.xcassets in Resources */,
+				CE67DD7E1DA6C7BE00F86634 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6475240E4DF1E8BB99BF572F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7DE32954E220010BBBFE204F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MessagesExtension/Pods-MessagesExtension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C192B9E935FA7077FCFA3333 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D9844954B8F461A50FCFB3EB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MessagesExtension/Pods-MessagesExtension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3455B9D73CD94EA73CF67D7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RSSMessage/Pods-RSSMessage-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE67DD6E1DA6C7BE00F86634 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE67DD7B1DA6C7BE00F86634 /* MessagesViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE67DD751DA6C7BE00F86634 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE67DD711DA6C7BE00F86634 /* MessagesExtension */;
+			targetProxy = CE67DD741DA6C7BE00F86634 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CE67DD7C1DA6C7BE00F86634 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE67DD7D1DA6C7BE00F86634 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE67DD821DA6C7BE00F86634 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CE67DD831DA6C7BE00F86634 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE67DD851DA6C7BE00F86634 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCABB0C757840D783E0BBB1E /* Pods-MessagesExtension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				DEVELOPMENT_TEAM = 49BYD5B64K;
+				INFOPLIST_FILE = MessagesExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.incipia.RSSMessage.MessagesExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		CE67DD861DA6C7BE00F86634 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE249B642FE7A22A9A982E26 /* Pods-MessagesExtension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				DEVELOPMENT_TEAM = 49BYD5B64K;
+				INFOPLIST_FILE = MessagesExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.incipia.RSSMessage.MessagesExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		CE67DD891DA6C7BE00F86634 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 464393577D69A6249B7E5026 /* Pods-RSSMessage.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 49BYD5B64K;
+				INFOPLIST_FILE = RSSMessage/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.incipia.RSSMessage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE67DD8A1DA6C7BE00F86634 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FC12D7B79EC91EE07617A3D /* Pods-RSSMessage.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 49BYD5B64K;
+				INFOPLIST_FILE = RSSMessage/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.incipia.RSSMessage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE67DD651DA6C7BE00F86634 /* Build configuration list for PBXProject "RSSMessage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE67DD821DA6C7BE00F86634 /* Debug */,
+				CE67DD831DA6C7BE00F86634 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE67DD841DA6C7BE00F86634 /* Build configuration list for PBXNativeTarget "MessagesExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE67DD851DA6C7BE00F86634 /* Debug */,
+				CE67DD861DA6C7BE00F86634 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE67DD881DA6C7BE00F86634 /* Build configuration list for PBXNativeTarget "RSSMessage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE67DD891DA6C7BE00F86634 /* Debug */,
+				CE67DD8A1DA6C7BE00F86634 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE67DD621DA6C7BE00F86634 /* Project object */;
+}

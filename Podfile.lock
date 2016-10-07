@@ -1,0 +1,26 @@
+PODS:
+  - Alamofire (4.0.1)
+  - AlamofireRSSParser (2.0.0):
+    - Alamofire
+  - MWFeedParser (1.0.1):
+    - MWFeedParser/FeedParser (= 1.0.1)
+    - MWFeedParser/NSDate+InternetDateTime (= 1.0.1)
+    - MWFeedParser/NSString+HTML (= 1.0.1)
+  - MWFeedParser/FeedParser (1.0.1):
+    - MWFeedParser/NSDate+InternetDateTime
+    - MWFeedParser/NSString+HTML
+  - MWFeedParser/NSDate+InternetDateTime (1.0.1)
+  - MWFeedParser/NSString+HTML (1.0.1)
+
+DEPENDENCIES:
+  - AlamofireRSSParser
+  - MWFeedParser
+
+SPEC CHECKSUMS:
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  AlamofireRSSParser: bbad0689d597704025c4f101a1a31698fa2c1920
+  MWFeedParser: 2cf646014c1baf6ad1b08c480b40a08180079247
+
+PODFILE CHECKSUM: 9f7e710acfc444576e5cb4de50565386faa97bed
+
+COCOAPODS: 1.1.0.rc.2

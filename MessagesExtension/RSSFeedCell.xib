@@ -20,15 +20,23 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKF-4D-YaZ">
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                        <color key="textColor" red="0.09223233163356781" green="0.092229574918746948" blue="0.092231146991252899" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstItem="2bO-7I-UCa" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="ANT-TC-xpc"/>
+                <constraint firstItem="tKF-4D-YaZ" firstAttribute="centerX" secondItem="2bO-7I-UCa" secondAttribute="centerX" id="QFj-wm-HkN"/>
                 <constraint firstItem="2bO-7I-UCa" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="nNv-mb-Jh2"/>
+                <constraint firstItem="tKF-4D-YaZ" firstAttribute="top" secondItem="2bO-7I-UCa" secondAttribute="bottom" constant="5.5" id="z5J-CB-7Ws"/>
             </constraints>
             <size key="customSize" width="123" height="104"/>
             <connections>
                 <outlet property="label" destination="2bO-7I-UCa" id="EhO-Ak-son"/>
+                <outlet property="totalItemsLabel" destination="tKF-4D-YaZ" id="Evd-zu-7xA"/>
             </connections>
             <point key="canvasLocation" x="68.5" y="110"/>
         </collectionViewCell>

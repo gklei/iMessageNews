@@ -22,7 +22,7 @@
                                 <frame key="frameInset" width="375" height="250"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wJW-Fi-LID" customClass="RSSFeedsCompactLayout" customModule="MessagesExtension" customModuleProvider="target">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wJW-Fi-LID" customClass="RSSFeedsLayout" customModule="MessagesExtension" customModuleProvider="target">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -52,15 +52,9 @@
                     <size key="freeformSize" width="375" height="250"/>
                     <connections>
                         <outlet property="_collectionView" destination="rhS-VH-Z5P" id="eLO-US-84j"/>
-                        <outlet property="_rssFeedViewControllerContainer" destination="334-ia-EvU" id="D2o-0H-y5h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="334-ia-EvU">
-                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </view>
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="0.89955022488755632"/>
         </scene>

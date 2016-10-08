@@ -14,12 +14,14 @@
 		CE67DD7B1DA6C7BE00F86634 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67DD7A1DA6C7BE00F86634 /* MessagesViewController.swift */; };
 		CE67DD7E1DA6C7BE00F86634 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE67DD7C1DA6C7BE00F86634 /* MainInterface.storyboard */; };
 		CE67DD801DA6C7BE00F86634 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE67DD7F1DA6C7BE00F86634 /* Assets.xcassets */; };
-		CE93A2651DA851D200FBE812 /* CompactFeedsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93A2641DA851D200FBE812 /* CompactFeedsLayout.swift */; };
+		CE93A2651DA851D200FBE812 /* CollectionViewLayouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93A2641DA851D200FBE812 /* CollectionViewLayouts.swift */; };
 		CE93A2671DA8524200FBE812 /* RSSFeedDownloadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93A2661DA8524200FBE812 /* RSSFeedDownloadController.swift */; };
 		CE93A2691DA8603600FBE812 /* FeedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93A2681DA8603600FBE812 /* FeedType.swift */; };
 		CE93A26C1DA8682100FBE812 /* RSSFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93A26A1DA8682100FBE812 /* RSSFeedCell.swift */; };
 		CE93A26D1DA8682100FBE812 /* RSSFeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE93A26B1DA8682100FBE812 /* RSSFeedCell.xib */; };
 		CE93A26F1DA8738000FBE812 /* RSSFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93A26E1DA8738000FBE812 /* RSSFeedViewController.swift */; };
+		CE93A2721DA9929200FBE812 /* RSSFeedItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93A2701DA9929200FBE812 /* RSSFeedItemCell.swift */; };
+		CE93A2731DA9929200FBE812 /* RSSFeedItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE93A2711DA9929200FBE812 /* RSSFeedItemCell.xib */; };
 		E8C772B945F4761B37D20196 /* Pods_RSSMessage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D5F44CC794E232E8F38D6B /* Pods_RSSMessage.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,12 +64,14 @@
 		CE67DD7D1DA6C7BE00F86634 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		CE67DD7F1DA6C7BE00F86634 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE67DD811DA6C7BE00F86634 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE93A2641DA851D200FBE812 /* CompactFeedsLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompactFeedsLayout.swift; sourceTree = "<group>"; };
+		CE93A2641DA851D200FBE812 /* CollectionViewLayouts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewLayouts.swift; sourceTree = "<group>"; };
 		CE93A2661DA8524200FBE812 /* RSSFeedDownloadController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSFeedDownloadController.swift; sourceTree = "<group>"; };
 		CE93A2681DA8603600FBE812 /* FeedType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedType.swift; sourceTree = "<group>"; };
 		CE93A26A1DA8682100FBE812 /* RSSFeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSFeedCell.swift; sourceTree = "<group>"; };
 		CE93A26B1DA8682100FBE812 /* RSSFeedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSSFeedCell.xib; sourceTree = "<group>"; };
 		CE93A26E1DA8738000FBE812 /* RSSFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSFeedViewController.swift; sourceTree = "<group>"; };
+		CE93A2701DA9929200FBE812 /* RSSFeedItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSFeedItemCell.swift; sourceTree = "<group>"; };
+		CE93A2711DA9929200FBE812 /* RSSFeedItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSSFeedItemCell.xib; sourceTree = "<group>"; };
 		DCABB0C757840D783E0BBB1E /* Pods-MessagesExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessagesExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MessagesExtension/Pods-MessagesExtension.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,12 +153,14 @@
 				CE67DD7C1DA6C7BE00F86634 /* MainInterface.storyboard */,
 				CE67DD7F1DA6C7BE00F86634 /* Assets.xcassets */,
 				CE67DD811DA6C7BE00F86634 /* Info.plist */,
-				CE93A2641DA851D200FBE812 /* CompactFeedsLayout.swift */,
+				CE93A2641DA851D200FBE812 /* CollectionViewLayouts.swift */,
 				CE93A2661DA8524200FBE812 /* RSSFeedDownloadController.swift */,
 				CE93A2681DA8603600FBE812 /* FeedType.swift */,
 				CE93A26A1DA8682100FBE812 /* RSSFeedCell.swift */,
 				CE93A26B1DA8682100FBE812 /* RSSFeedCell.xib */,
 				CE93A26E1DA8738000FBE812 /* RSSFeedViewController.swift */,
+				CE93A2701DA9929200FBE812 /* RSSFeedItemCell.swift */,
+				CE93A2711DA9929200FBE812 /* RSSFeedItemCell.xib */,
 			);
 			path = MessagesExtension;
 			sourceTree = "<group>";
@@ -259,6 +265,7 @@
 				CE67DD801DA6C7BE00F86634 /* Assets.xcassets in Resources */,
 				CE93A26D1DA8682100FBE812 /* RSSFeedCell.xib in Resources */,
 				CE67DD7E1DA6C7BE00F86634 /* MainInterface.storyboard in Resources */,
+				CE93A2731DA9929200FBE812 /* RSSFeedItemCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,8 +357,9 @@
 				CE93A2671DA8524200FBE812 /* RSSFeedDownloadController.swift in Sources */,
 				CE67DD7B1DA6C7BE00F86634 /* MessagesViewController.swift in Sources */,
 				CE93A26C1DA8682100FBE812 /* RSSFeedCell.swift in Sources */,
-				CE93A2651DA851D200FBE812 /* CompactFeedsLayout.swift in Sources */,
+				CE93A2651DA851D200FBE812 /* CollectionViewLayouts.swift in Sources */,
 				CE93A2691DA8603600FBE812 /* FeedType.swift in Sources */,
+				CE93A2721DA9929200FBE812 /* RSSFeedItemCell.swift in Sources */,
 				CE93A26F1DA8738000FBE812 /* RSSFeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

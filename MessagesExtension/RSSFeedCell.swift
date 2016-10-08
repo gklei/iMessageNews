@@ -9,9 +9,14 @@
 import UIKit
 import AlamofireRSSParser
 
-class RSSFeedCell: UICollectionViewCell {
+protocol FeedInfoConfigurable {
+	func configure(withFeedInfo info: RSSFeedInfo)
+}
+
+class RSSFeedCell: UICollectionViewCell, FeedInfoConfigurable {
 	
 	@IBOutlet fileprivate var label: UILabel!
+	@IBOutlet fileprivate var totalItemsLabel: UILabel!
 	
 	static let reuseID = "RSSFeedCellIdentifier"
 	
@@ -25,11 +30,18 @@ class RSSFeedCell: UICollectionViewCell {
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		label.textColor = .white
+		totalItemsLabel.textColor = .white
 		layer.cornerRadius = 6.0
 	}
 	
 	func configure(withFeedType type: FeedType) {
 		label.text = type.rawValue
 		backgroundColor = type.color
+	}
+	
+	func configure(withFeedInfo info: RSSFeedInfo) {
+		totalItemsLabel.text = "\(info.feed.items.count)"
+		label.text = info.type.rawValue
+		backgroundColor = info.type.color
 	}
 }

@@ -2,10 +2,12 @@ PODS:
   - Alamofire (4.0.1)
   - AlamofireRSSParser (2.0.0):
     - Alamofire
+  - AsyncImageView (1.6)
   - SwiftHEXColors (1.0.4)
 
 DEPENDENCIES:
   - AlamofireRSSParser
+  - AsyncImageView
   - SwiftHEXColors (from `https://github.com/thii/SwiftHEXColors`, branch `swift-3.0`)
 
 EXTERNAL SOURCES:
@@ -21,8 +23,9 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   AlamofireRSSParser: bbad0689d597704025c4f101a1a31698fa2c1920
+  AsyncImageView: 416e99402e5b1f20571de70ad619ced90f56a7d9
   SwiftHEXColors: b0ecc7bd83a1aa2e1956f9ba51f55ebb2bcf86ef
 
-PODFILE CHECKSUM: 9c61672b553716c4ef232a196690ddd874cddbcd
+PODFILE CHECKSUM: ac45f9e7deda8fddcccac7012e0e70d4e974e59e
 
 COCOAPODS: 1.1.0.rc.2

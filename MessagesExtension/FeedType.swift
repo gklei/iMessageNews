@@ -20,9 +20,9 @@ extension FeedType {
 		case .tech: return "https://www.wired.com/category/gear/feed/"
 		case .news: return "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
 		case .sports: return "https://www.espn.com/espn/rss/news"
-		case .politics: return "https://www.dailyhaha.com/rss/pictures/"
-		case .business: return "https://www.dailyhaha.com/rss/pictures/"
-		case .humor: return "https://www.dailyhaha.com/rss/pictures/"
+		case .politics: return "https://www.wired.com/category/gear/feed/"
+		case .business: return "https://www.wired.com/category/gear/feed/"
+		case .humor: return "https://www.wired.com/category/gear/feed/"
 		}
 	}
 	

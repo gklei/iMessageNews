@@ -25,7 +25,6 @@ class RSSFeedCell: UICollectionViewCell {
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		label.textColor = .white
-		
 		layer.cornerRadius = 6.0
 	}
 	

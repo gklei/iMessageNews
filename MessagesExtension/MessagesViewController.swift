@@ -12,20 +12,33 @@ import Messages
 class MessagesViewController: MSMessagesAppViewController {
 	
 	@IBOutlet fileprivate var _collectionView: UICollectionView!
+	@IBOutlet fileprivate var _rssFeedViewControllerContainer: UIView!
 	
 	fileprivate let _compactLayout = RSSFeedsCompactLayout()
 	fileprivate let _expandedLayout = RSSFeedsExpandedLayout()
+	fileprivate let _rssFeedVC = RSSFeedViewController.create()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		RSSFeedCell.register(collectionView: _collectionView)
 		RSSFeedDownloadController.shared.refreshFeed(withType: .humor)
+		
+		_rssFeedViewControllerContainer.backgroundColor = .blue
+		_rssFeedViewControllerContainer.isHidden = true
+		view.addSubview(_rssFeedViewControllerContainer)
 	}
 	
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
+	override func viewDidLayoutSubviews() {
+		super.viewDidLayoutSubviews()
+		
+		let offset: CGFloat = topLayoutGuide.length
+		let size = view.bounds.size
+		let height = size.height - offset
+		
+		let calculatedFrame = CGRect(x: 0, y: offset, width: size.width, height: height)
+		_collectionView.frame = calculatedFrame
+		_rssFeedViewControllerContainer.frame = calculatedFrame
 	}
 	
 	// MARK: - Conversation Handling

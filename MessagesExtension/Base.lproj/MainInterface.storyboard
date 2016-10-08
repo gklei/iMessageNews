@@ -18,7 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rhS-VH-Z5P">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rhS-VH-Z5P">
+                                <frame key="frameInset" width="375" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wJW-Fi-LID" customClass="RSSFeedsCompactLayout" customModule="MessagesExtension" customModuleProvider="target">
                                     <size key="itemSize" width="50" height="50"/>
@@ -43,12 +45,6 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="rhS-VH-Z5P" secondAttribute="trailing" id="cbl-Ik-U3v"/>
-                            <constraint firstItem="rhS-VH-Z5P" firstAttribute="top" secondItem="qkL-Od-lgU" secondAttribute="bottom" id="igL-VC-zbb"/>
-                            <constraint firstItem="n38-gi-rB5" firstAttribute="top" secondItem="rhS-VH-Z5P" secondAttribute="bottom" id="izF-xq-6yY"/>
-                            <constraint firstItem="rhS-VH-Z5P" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="yH0-tc-J57"/>
-                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -56,11 +52,54 @@
                     <size key="freeformSize" width="375" height="250"/>
                     <connections>
                         <outlet property="_collectionView" destination="rhS-VH-Z5P" id="eLO-US-84j"/>
+                        <outlet property="_rssFeedViewControllerContainer" destination="334-ia-EvU" id="D2o-0H-y5h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="334-ia-EvU">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="0.89955022488755632"/>
+        </scene>
+        <!--Feed View Controller-->
+        <scene sceneID="5oO-7M-ktg">
+            <objects>
+                <viewController storyboardIdentifier="RSSFeedViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NXB-eq-9Xa" customClass="RSSFeedViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kWT-Hg-7cM"/>
+                        <viewControllerLayoutGuide type="bottom" id="uMz-wJ-NLd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="B0K-Dx-PtF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbm-lR-HQE">
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <action selector="dismissButtonPressed" destination="NXB-eq-9Xa" eventType="touchUpInside" id="qky-Fx-on5"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GPN-jx-voL">
+                                <color key="backgroundColor" red="0.14937493205070496" green="0.58450782299041748" blue="0.76389563083648682" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GPN-jx-voL" firstAttribute="leading" secondItem="B0K-Dx-PtF" secondAttribute="leading" constant="10" id="Tqu-28-JNV"/>
+                            <constraint firstAttribute="trailing" secondItem="GPN-jx-voL" secondAttribute="trailing" constant="10" id="bhD-oj-0Jj"/>
+                            <constraint firstItem="uMz-wJ-NLd" firstAttribute="top" secondItem="GPN-jx-voL" secondAttribute="bottom" constant="20" id="fKu-7a-kxS"/>
+                            <constraint firstItem="xbm-lR-HQE" firstAttribute="top" secondItem="kWT-Hg-7cM" secondAttribute="bottom" constant="8" id="g9g-Wk-eIJ"/>
+                            <constraint firstItem="xbm-lR-HQE" firstAttribute="centerX" secondItem="B0K-Dx-PtF" secondAttribute="centerX" id="oEx-JO-Mub"/>
+                            <constraint firstItem="GPN-jx-voL" firstAttribute="top" secondItem="xbm-lR-HQE" secondAttribute="bottom" constant="20" id="zuD-e6-ujO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zx9-HK-cYy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="804" y="48.125937031484263"/>
         </scene>
     </scenes>
 </document>

@@ -29,7 +29,6 @@ extension FeedType {
 	var color: UIColor? {
 		switch self {
 		case .tech: return UIColor(hexString: "de2153")
-		case .news: return UIColor(hexString: "3dc286")
 		case .sports: return UIColor(hexString: "19d1e6")
 		case .politics: return UIColor(hexString: "a15e80")
 		case .business: return UIColor(hexString: "f2960d")

@@ -10,30 +10,27 @@ import UIKit
 import AlamofireRSSParser
 import Alamofire
 
-struct FeedURL {
-	static let tech = "https://www.wired.com/category/gear/feed/"
-	static let news = "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
-	static let sports = "https://www.espn.com/espn/rss/news"
-	static let funny = "https://www.dailyhaha.com/rss/pictures/"
+extension Notification.Name {
+	public static let rssItemDownloaded = Notification.Name("RSSMessage.itemDownloadedNotificationName")
+	public static let rssFeedDownloaded = Notification.Name("RSSMessage.feedDownloadedNotificationName")
 }
 
-class RSSFeedDownloadController: NSObject {
-
-	func download() {
-		
-		Alamofire.request(FeedURL.sports).responseRSS() { (response) -> Void in
-			if let feed: RSSFeed = response.result.value {
-				for item in feed.items {
-					print("SPORTS: \(item)")
-				}
-			}
+class RSSFeedDownloadController {
+	
+	static let shared = RSSFeedDownloadController()
+	
+	func refreshAll() {
+		FeedType.all.forEach {
+			refreshFeed(withType: $0)
 		}
-		
-		Alamofire.request(FeedURL.tech).responseRSS { (response) in
+	}
+
+	func refreshFeed(withType type: FeedType) {
+		Alamofire.request(type.url).responseRSS() { (response) -> Void in
+			
 			if let feed: RSSFeed = response.result.value {
-				feed.items.forEach {
-					print("TECH: \($0)")
-				}
+				let info: [String : Any] = ["rssFeed" : feed]
+				NotificationCenter.default.post(name: .rssFeedDownloaded, object: nil, userInfo: info)
 			}
 		}
 	}

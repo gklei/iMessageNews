@@ -8,18 +8,19 @@
 
 import UIKit
 import Messages
-import Alamofire
-import AlamofireRSSParser
 
 class MessagesViewController: MSMessagesAppViewController {
 	
 	@IBOutlet fileprivate var _collectionView: UICollectionView!
 	
+	fileprivate let _compactLayout = RSSFeedsCompactLayout()
+	fileprivate let _expandedLayout = RSSFeedsExpandedLayout()
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		automaticallyAdjustsScrollViewInsets = false
-		_collectionView.collectionViewLayout = RSSFeedsCompactLayout()
+		RSSFeedCell.register(collectionView: _collectionView)
+		RSSFeedDownloadController.shared.refreshFeed(withType: .humor)
 	}
 	
 	override func didReceiveMemoryWarning() {
@@ -59,16 +60,15 @@ class MessagesViewController: MSMessagesAppViewController {
 	
 	override func didCancelSending(_ message: MSMessage, conversation: MSConversation) {
 		// Called when the user deletes the message without sending it.
-		
 		// Use this to clean up state related to the deleted message.
 	}
 	
 	override func willTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
 		switch presentationStyle {
 		case .expanded:
-			_collectionView.setCollectionViewLayout(RSSFeedsExpandedLayout(), animated: true)
+			_collectionView.setCollectionViewLayout(_expandedLayout, animated: true)
 		case .compact:
-			_collectionView.setCollectionViewLayout(RSSFeedsCompactLayout(), animated: true)
+			_collectionView.setCollectionViewLayout(_compactLayout, animated: true)
 		}
 	}
 	
@@ -80,12 +80,16 @@ class MessagesViewController: MSMessagesAppViewController {
 
 extension MessagesViewController: UICollectionViewDataSource {
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return 6
+		return FeedType.all.count
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellReuseID", for: indexPath)
-		cell.contentView.backgroundColor = .red
+		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RSSFeedCell.reuseID,
+		                                              for: indexPath) as! RSSFeedCell
+		
+		let type = FeedType.all[indexPath.row]
+		cell.configure(withFeedType: type)
+		
 		return cell
 	}
 }

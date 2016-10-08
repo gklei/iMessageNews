@@ -7,7 +7,7 @@ target 'MessagesExtension' do
 
   # Pods for MessagesExtension
   pod 'AlamofireRSSParser'
-
+  pod 'SwiftHEXColors', :git => 'https://github.com/thii/SwiftHEXColors', :branch => 'swift-3.0'
 end
 
 target 'RSSMessage' do

@@ -20,11 +20,14 @@ class MessagesViewController: MSMessagesAppViewController {
 		
 		RSSFeedCell.register(collectionView: _collectionView)
 		RSSFeedItemCell.register(collectionView: _collectionView)
+		BackToTopicsCell.register(collectionView: _collectionView)
 		
 		RSSFeedDownloadController.shared.refreshAll()
 		
 		let sel = #selector(MessagesViewController.feedDownloaded(_:))
 		NotificationCenter.default.addObserver(self, selector: sel, name: .rssFeedDownloaded, object: nil)
+		
+		_collectionView.collectionViewLayout = RSSFeedsLayout(style: .compact)
 	}
 	
 	internal func feedDownloaded(_ notification: Notification) {
@@ -78,28 +81,69 @@ class MessagesViewController: MSMessagesAppViewController {
 extension MessagesViewController: UICollectionViewDataSource {
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		if let info = selectedFeed {
-			return info.feed.items.count
+			return info.feed.items.count + 1
 		} else {
 			return FeedType.all.count
 		}
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		
-		let reuseID = selectedFeed != nil ? RSSFeedItemCell.reuseID : RSSFeedCell.reuseID
+		let reuseID = _reuseID(forIndexPath: indexPath)
 		return collectionView.dequeueReusableCell(withReuseIdentifier: reuseID, for: indexPath)
+	}
+	
+	func collectionView(_ collectionView: UICollectionView,
+	                    viewForSupplementaryElementOfKind kind: String,
+	                    at indexPath: IndexPath) -> UICollectionReusableView {
+		
+		let reuseID = RSSCollectionViewHeader.reuseID
+		let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader,
+		                                                             withReuseIdentifier: reuseID,
+		                                                             for: indexPath)
+		return header
+	}
+	
+	private func _currentReuseID() -> String {
+		return selectedFeed != nil ? RSSFeedItemCell.reuseID : RSSFeedCell.reuseID
+	}
+	
+	private func _reuseID(forIndexPath ip: IndexPath) -> String {
+		if selectedFeed != nil {
+			return ip.row == 0 ? BackToTopicsCell.reuseID : RSSFeedItemCell.reuseID
+		} else {
+			return RSSFeedCell.reuseID
+		}
 	}
 }
 
 extension MessagesViewController: UICollectionViewDelegate {
-	func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-		if selectedFeed == nil {
+	func collectionView(_ collectionView: UICollectionView,
+	                    willDisplay cell: UICollectionViewCell,
+	                    forItemAt indexPath: IndexPath) {
+		
+		if let selectedInfo = selectedFeed, indexPath.row != 0 {
+			let item = selectedInfo.feed.items[indexPath.row - 1]
+			(cell as? RSSFeedItemCell)?.configure(withFeedItem: item)
+			(cell as? RSSFeedItemCell)?.configure(withFeedInfo: selectedInfo)
+		} else {
 			let type = FeedType.all[indexPath.row]
 			(cell as? RSSFeedCell)?.configure(withFeedType: type)
-		} else {
-			let item = selectedFeed!.feed.items[indexPath.row]
-			(cell as? RSSFeedItemCell)?.configure(withFeedItem: item)
-			(cell as? RSSFeedItemCell)?.configure(withFeedInfo: selectedFeed!)
+		}
+	}
+	
+	func collectionView(_ collectionView: UICollectionView,
+	                    willDisplaySupplementaryView view: UICollectionReusableView,
+	                    forElementKind elementKind: String,
+	                    at indexPath: IndexPath) {
+		
+		switch elementKind {
+		case UICollectionElementKindSectionHeader:
+			if let info = selectedFeed {
+				(view as? RSSCollectionViewHeader)?.configure(withFeedInfo: info)
+			} else {
+				(view as? RSSCollectionViewHeader)?.reset()
+			}
+		default: break
 		}
 	}
 	
@@ -108,11 +152,27 @@ extension MessagesViewController: UICollectionViewDelegate {
 			let type = FeedType.all[indexPath.row]
 			if let feed = RSSFeedCache.shared.feed(forType: type) {
 				selectedFeed = RSSFeedInfo(feed: feed, type: type)
+				
+				_collectionView.reloadData()
+				_collectionView.setCollectionViewLayout(_currentCollectionViewLayout(), animated: true)
 			}
-		} else {
+		} else if indexPath.row == 0 {
 			selectedFeed = nil
+			_collectionView.reloadData()
+			_collectionView.setCollectionViewLayout(_currentCollectionViewLayout(), animated: true)
 		}
-		_collectionView.reloadData()
-		_collectionView.setCollectionViewLayout(_currentCollectionViewLayout(), animated: true)
+	}
+}
+
+extension MessagesViewController: UICollectionViewDelegateFlowLayout {
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+		switch collectionViewLayout {
+		case let layout as RSSFeedItemsLayout:
+			return layout.size(forItemAtIndexPath: indexPath)
+		case let layout as RSSFeedsLayout:
+			return layout.itemSize
+		default:
+			fatalError("Invalid layout: \(collectionViewLayout)")
+		}
 	}
 }

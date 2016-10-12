@@ -12,8 +12,12 @@ import Messages
 class MessagesViewController: MSMessagesAppViewController {
 	
 	@IBOutlet fileprivate var _collectionView: UICollectionView!
-	
 	var selectedFeed: RSSFeedInfo?
+	
+	required init?(coder aDecoder: NSCoder) {
+		super.init(coder: aDecoder)
+		RSSFeedDownloadController.shared.refreshAll()
+	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -22,24 +26,7 @@ class MessagesViewController: MSMessagesAppViewController {
 		RSSFeedItemCell.register(collectionView: _collectionView)
 		BackToTopicsCell.register(collectionView: _collectionView)
 		
-		RSSFeedDownloadController.shared.refreshAll()
-		
-		let sel = #selector(MessagesViewController.feedDownloaded(_:))
-		NotificationCenter.default.addObserver(self, selector: sel, name: .rssFeedDownloaded, object: nil)
-		
 		_collectionView.collectionViewLayout = RSSFeedsLayout(style: .compact)
-	}
-	
-	internal func feedDownloaded(_ notification: Notification) {
-		guard selectedFeed == nil else { return }
-		
-		guard let feedInfo = RSSFeedInfo(notification: notification) else { return }
-		guard let index = FeedType.all.index(of: feedInfo.type) else { return }
-		
-		let ip = IndexPath(row: index, section: 0)
-		guard let cell = _collectionView.cellForItem(at: ip) else { return }
-		
-		(cell as? FeedInfoConfigurable)?.configure(withFeedInfo: feedInfo)
 	}
 	
 	override func viewDidLayoutSubviews() {

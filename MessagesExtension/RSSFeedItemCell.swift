@@ -32,10 +32,10 @@ class RSSFeedItemCell: UICollectionViewCell, FeedInfoConfigurable {
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		layer.cornerRadius = 6.0
+		backgroundColor = .white
 		thumbnailImageView.crossfadeDuration = 0
 		thumbnailImageView.layer.cornerRadius = 2.0
 		thumbnailImageView.layer.masksToBounds = true
-		backgroundColor = .white
 	}
 	
 	func configure(withFeedInfo info: RSSFeedInfo) {

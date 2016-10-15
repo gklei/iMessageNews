@@ -18,9 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" delaysContentTouches="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rhS-VH-Z5P">
-                                <frame key="frameInset" width="375" height="250"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" delaysContentTouches="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rhS-VH-Z5P">
                                 <color key="backgroundColor" red="0.95294117647058818" green="0.96078431372549022" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wJW-Fi-LID" customClass="RSSFeedsLayout" customModule="MessagesExtension" customModuleProvider="target">
                                     <size key="itemSize" width="50" height="50"/>
@@ -52,14 +50,35 @@
                                             <color key="textColor" red="0.52156862745098043" green="0.55686274509803924" blue="0.59607843137254901" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="egS-8f-Qvo">
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqP-pd-syg">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="8wp-jX-nNV"/>
+                                                <constraint firstAttribute="trailing" secondItem="jqP-pd-syg" secondAttribute="trailing" constant="4" id="Bce-a3-aNm"/>
+                                                <constraint firstItem="jqP-pd-syg" firstAttribute="leading" secondItem="egS-8f-Qvo" secondAttribute="leading" constant="4" id="JWS-ne-zaj"/>
+                                                <constraint firstItem="jqP-pd-syg" firstAttribute="centerX" secondItem="egS-8f-Qvo" secondAttribute="centerX" id="iGZ-aM-NF1"/>
+                                                <constraint firstItem="jqP-pd-syg" firstAttribute="centerY" secondItem="egS-8f-Qvo" secondAttribute="centerY" id="ysJ-R6-YsX"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="dqZ-EK-mZZ" firstAttribute="top" secondItem="jYw-RK-3Ej" secondAttribute="top" constant="16" id="BX7-Ix-s0s"/>
                                         <constraint firstItem="bRe-j3-fKW" firstAttribute="top" secondItem="jYw-RK-3Ej" secondAttribute="top" constant="16" id="Iie-bg-EaI"/>
                                         <constraint firstAttribute="trailing" secondItem="dqZ-EK-mZZ" secondAttribute="trailing" constant="20" id="JDA-TY-Qx6"/>
+                                        <constraint firstItem="dqZ-EK-mZZ" firstAttribute="leading" secondItem="egS-8f-Qvo" secondAttribute="trailing" constant="18" id="JiI-lH-4jJ"/>
                                         <constraint firstItem="bRe-j3-fKW" firstAttribute="leading" secondItem="jYw-RK-3Ej" secondAttribute="leading" constant="20" id="qS6-v5-cOh"/>
+                                        <constraint firstItem="egS-8f-Qvo" firstAttribute="centerY" secondItem="dqZ-EK-mZZ" secondAttribute="centerY" id="vSf-Nb-M3i"/>
                                     </constraints>
                                     <connections>
+                                        <outlet property="_badgeContainerView" destination="egS-8f-Qvo" id="LH6-0T-Xn4"/>
+                                        <outlet property="_badgeLabel" destination="jqP-pd-syg" id="2fG-PG-gWx"/>
                                         <outlet property="_leftLabel" destination="bRe-j3-fKW" id="Ikc-iN-yEb"/>
                                         <outlet property="_rightLabel" destination="dqZ-EK-mZZ" id="Fug-R2-cNB"/>
                                     </connections>
@@ -71,6 +90,12 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="rhS-VH-Z5P" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="3te-UF-kYm"/>
+                            <constraint firstItem="rhS-VH-Z5P" firstAttribute="top" secondItem="qkL-Od-lgU" secondAttribute="bottom" id="IPA-aE-Usz"/>
+                            <constraint firstAttribute="trailing" secondItem="rhS-VH-Z5P" secondAttribute="trailing" id="J1o-cE-TM4"/>
+                            <constraint firstItem="n38-gi-rB5" firstAttribute="top" secondItem="rhS-VH-Z5P" secondAttribute="bottom" id="heK-QS-rQj"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <nil key="simulatedStatusBarMetrics"/>

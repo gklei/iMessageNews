@@ -19,10 +19,10 @@ extension FeedType {
 		switch self {
 		case .tech: return "https://www.wired.com/category/gear/feed/"
 		case .news: return "http://rss.nytimes.com/services/xml/rss/nyt/US.xml"
-		case .sports: return "https://www.espn.com/espn/rss/news"
+		case .sports: return "http://rss.nytimes.com/services/xml/rss/nyt/Sports.xml"
 		case .politics: return "http://www.politico.com/rss/politicopicks.xml"
 		case .business: return "http://rss.nytimes.com/services/xml/rss/nyt/Business.xml"
-		case .humor: return "http://www.newyorker.com/feed/humor"
+		case .humor: return "http://www.huffingtonpost.com/feeds/verticals/comedy/index.xml"
 		}
 	}
 	
@@ -34,6 +34,17 @@ extension FeedType {
 		case .business: return #imageLiteral(resourceName: "business")
 		case .news: return #imageLiteral(resourceName: "news")
 		case .humor: return #imageLiteral(resourceName: "humor")
+		}
+	}
+	
+	var color: UIColor? {
+		switch self {
+		case .tech: return UIColor(hexString: "43A6DD")
+		case .sports: return UIColor(hexString: "FF9C7A")
+		case .politics: return UIColor(hexString: "B3BBB8")
+		case .business: return UIColor(hexString: "C3A6DD")
+		case .news: return UIColor(hexString: "43DDBB")
+		case .humor: return UIColor(hexString: "FFDE4D")
 		}
 	}
 }

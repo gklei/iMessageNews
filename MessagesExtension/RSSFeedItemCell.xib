@@ -26,18 +26,37 @@
                             <constraint firstAttribute="height" constant="52" id="cXe-jw-FFH"/>
                         </constraints>
                     </imageView>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bPm-Zb-mMQ">
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bPm-Zb-mMQ">
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SOURCE TITLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKY-Xi-HOj">
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eA9-vh-yuB">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="ado-Ki-8D5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="25" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="READ" image="right_arrow"/>
+                                <state key="highlighted">
+                                    <color key="titleColor" red="0.52221298179804909" green="0.52738340736040601" blue="0.52738340736040601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="_readButtonPressed" destination="gTV-IL-0wX" eventType="touchUpInside" id="zyB-AP-YWB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="CKY-Xi-HOj" firstAttribute="leading" secondItem="bPm-Zb-mMQ" secondAttribute="leading" constant="18" id="2eJ-gx-drb"/>
                             <constraint firstItem="CKY-Xi-HOj" firstAttribute="centerY" secondItem="bPm-Zb-mMQ" secondAttribute="centerY" id="NZ0-Vr-px5"/>
+                            <constraint firstAttribute="bottom" secondItem="eA9-vh-yuB" secondAttribute="bottom" id="cdJ-vD-Cmv"/>
+                            <constraint firstItem="eA9-vh-yuB" firstAttribute="top" secondItem="bPm-Zb-mMQ" secondAttribute="top" id="fzt-OZ-3Kx"/>
+                            <constraint firstAttribute="trailing" secondItem="eA9-vh-yuB" secondAttribute="trailing" id="llV-sA-vgo"/>
                             <constraint firstAttribute="height" constant="30" id="ojT-YH-sCz"/>
                         </constraints>
                     </view>
@@ -71,4 +90,7 @@
             <point key="canvasLocation" x="41" y="106.5"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="right_arrow" width="10" height="8"/>
+    </resources>
 </document>

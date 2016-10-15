@@ -14,6 +14,7 @@
 		CE48A1361DADE496002B7B2F /* RSSCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE48A1351DADE496002B7B2F /* RSSCollectionViewHeader.swift */; };
 		CE48A1391DADEB33002B7B2F /* BackToTopicsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE48A1371DADEB33002B7B2F /* BackToTopicsCell.swift */; };
 		CE48A13A1DADEB33002B7B2F /* BackToTopicsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE48A1381DADEB33002B7B2F /* BackToTopicsCell.xib */; };
+		CE48A13C1DAEBF96002B7B2F /* SubtleShadowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE48A13B1DAEBF96002B7B2F /* SubtleShadowCell.swift */; };
 		CE67DD6C1DA6C7BE00F86634 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE67DD6B1DA6C7BE00F86634 /* Assets.xcassets */; };
 		CE67DD731DA6C7BE00F86634 /* MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CE67DD721DA6C7BE00F86634 /* MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CE67DD781DA6C7BE00F86634 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE67DD771DA6C7BE00F86634 /* Messages.framework */; };
@@ -27,6 +28,7 @@
 		CE93A26D1DA8682100FBE812 /* RSSFeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE93A26B1DA8682100FBE812 /* RSSFeedCell.xib */; };
 		CE93A2721DA9929200FBE812 /* RSSFeedItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93A2701DA9929200FBE812 /* RSSFeedItemCell.swift */; };
 		CE93A2731DA9929200FBE812 /* RSSFeedItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE93A2711DA9929200FBE812 /* RSSFeedItemCell.xib */; };
+		CEAEE4141DAEC7BF005B6C94 /* MSMessage+RSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAEE4131DAEC7BF005B6C94 /* MSMessage+RSS.swift */; };
 		E8C772B945F4761B37D20196 /* Pods_RSSMessage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D5F44CC794E232E8F38D6B /* Pods_RSSMessage.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +68,7 @@
 		CE48A1351DADE496002B7B2F /* RSSCollectionViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSCollectionViewHeader.swift; sourceTree = "<group>"; };
 		CE48A1371DADEB33002B7B2F /* BackToTopicsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackToTopicsCell.swift; sourceTree = "<group>"; };
 		CE48A1381DADEB33002B7B2F /* BackToTopicsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackToTopicsCell.xib; sourceTree = "<group>"; };
+		CE48A13B1DAEBF96002B7B2F /* SubtleShadowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtleShadowCell.swift; sourceTree = "<group>"; };
 		CE67DD681DA6C7BE00F86634 /* RSSMessage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSMessage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE67DD6B1DA6C7BE00F86634 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE67DD6D1DA6C7BE00F86634 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,6 +85,7 @@
 		CE93A26B1DA8682100FBE812 /* RSSFeedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSSFeedCell.xib; sourceTree = "<group>"; };
 		CE93A2701DA9929200FBE812 /* RSSFeedItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSFeedItemCell.swift; sourceTree = "<group>"; };
 		CE93A2711DA9929200FBE812 /* RSSFeedItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSSFeedItemCell.xib; sourceTree = "<group>"; };
+		CEAEE4131DAEC7BF005B6C94 /* MSMessage+RSS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MSMessage+RSS.swift"; sourceTree = "<group>"; };
 		DCABB0C757840D783E0BBB1E /* Pods-MessagesExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessagesExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MessagesExtension/Pods-MessagesExtension.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +157,7 @@
 				CE93A2701DA9929200FBE812 /* RSSFeedItemCell.swift */,
 				CE48A1351DADE496002B7B2F /* RSSCollectionViewHeader.swift */,
 				CE48A1371DADEB33002B7B2F /* BackToTopicsCell.swift */,
+				CE48A13B1DAEBF96002B7B2F /* SubtleShadowCell.swift */,
 			);
 			name = "Cells & Reusable Views";
 			sourceTree = "<group>";
@@ -160,6 +165,7 @@
 		CE48A1301DADE156002B7B2F /* Download & Cache */ = {
 			isa = PBXGroup;
 			children = (
+				CE93A2681DA8603600FBE812 /* FeedType.swift */,
 				CE93A2661DA8524200FBE812 /* RSSFeedDownloadController.swift */,
 				CE48A1311DADE188002B7B2F /* RSSFeedInfo.swift */,
 				CE48A1331DADE1C5002B7B2F /* RSSFeedCache.swift */,
@@ -215,7 +221,7 @@
 				CE48A12D1DADE104002B7B2F /* Resources */,
 				CE48A12A1DADE09E002B7B2F /* Layouts */,
 				CE67DD7A1DA6C7BE00F86634 /* MessagesViewController.swift */,
-				CE93A2681DA8603600FBE812 /* FeedType.swift */,
+				CEAEE4131DAEC7BF005B6C94 /* MSMessage+RSS.swift */,
 			);
 			path = MessagesExtension;
 			sourceTree = "<group>";
@@ -420,7 +426,9 @@
 				CE48A1361DADE496002B7B2F /* RSSCollectionViewHeader.swift in Sources */,
 				CE93A2651DA851D200FBE812 /* RSSFeedsLayout.swift in Sources */,
 				CE93A2691DA8603600FBE812 /* FeedType.swift in Sources */,
+				CE48A13C1DAEBF96002B7B2F /* SubtleShadowCell.swift in Sources */,
 				CE93A2721DA9929200FBE812 /* RSSFeedItemCell.swift in Sources */,
+				CEAEE4141DAEC7BF005B6C94 /* MSMessage+RSS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,23 +13,26 @@ protocol FeedInfoConfigurable {
 	func configure(withFeedInfo info: RSSFeedInfo)
 }
 
-class RSSFeedCell: UICollectionViewCell {
+class RSSFeedCell: SubtleShadowCell {
 	
 	@IBOutlet fileprivate var label: UILabel!
 	@IBOutlet fileprivate var imageView: UIImageView!
 	
 	static let reuseID = "RSSFeedCellIdentifier"
+	var type: FeedType?
 	
 	override var isHighlighted: Bool {
 		didSet {
 			if isHighlighted {
 				UIView.animate(withDuration: 0.18, animations: { () -> Void in
 					self.imageView.transform = CGAffineTransform(scaleX: 1.15, y: 1.15)
+					self.contentView.backgroundColor = self.type?.color?.withAlphaComponent(0.2)
 				})
 			}
 			else {
 				UIView.animate(withDuration: 0.2, animations: { () -> Void in
 					self.imageView.transform = CGAffineTransform.identity
+					self.contentView.backgroundColor = .clear
 				})
 			}
 		}
@@ -48,9 +51,11 @@ class RSSFeedCell: UICollectionViewCell {
 		
 		backgroundColor = .white
 		layer.cornerRadius = 4.0
+		contentView.layer.cornerRadius = 4.0
 	}
 	
 	func configure(withFeedType type: FeedType) {
+		self.type = type
 		label.text = type.rawValue.uppercased()
 		imageView.image = type.icon
 	}

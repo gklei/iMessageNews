@@ -8,20 +8,30 @@
 
 import UIKit
 
-class RSSCollectionViewHeader: UICollectionReusableView, FeedInfoConfigurable {
+class RSSCollectionViewHeader: UICollectionReusableView {
 	
 	@IBOutlet fileprivate var _leftLabel: UILabel!
 	@IBOutlet fileprivate var _rightLabel: UILabel!
+	@IBOutlet fileprivate var _badgeContainerView: UIView!
+	@IBOutlet fileprivate var _badgeLabel: UILabel!
 	
 	static let reuseID = "RSSCollectionViewHeaderReuseID"
 	
-	func configure(withFeedInfo info: RSSFeedInfo) {
-		_rightLabel.text = "\(info.feed.items.count) new stories"
-		_leftLabel.text = info.type.rawValue.capitalized
+	override func awakeFromNib() {
+		super.awakeFromNib()
+		_badgeContainerView.layer.cornerRadius = 4.0
 	}
 	
-	func reset() {
-		_leftLabel.text = "Feeds"
-		_rightLabel.text = "Select a topic"
+	func configure(withFeedInfo info: RSSFeedInfo?) {
+		if let info = info {
+			_badgeContainerView.isHidden = false
+			_badgeLabel.text = "\(info.feed.items.count)"
+			_rightLabel.text = "new stories"
+			_leftLabel.text = info.type.rawValue.capitalized
+		} else {
+			_badgeContainerView.isHidden = true
+			_leftLabel.text = "Feeds"
+			_rightLabel.text = "Select a topic"
+		}
 	}
 }

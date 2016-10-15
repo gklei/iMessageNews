@@ -43,7 +43,7 @@ class RSSFeedsLayout: UICollectionViewFlowLayout {
 		let spacing: CGFloat = itemSpacing
 		
 		let totalSpacing: CGFloat = spacing * 2 + (spacing * (CGFloat(itemsPerColumn) - 1))
-		let size = (screenWidth - totalSpacing) / CGFloat(itemsPerColumn)
+		let size = floor((screenWidth - totalSpacing) / CGFloat(itemsPerColumn))
 		
 		sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
 		itemSize = CGSize(width: size, height: size)

@@ -1,0 +1,6 @@
+framework module Pods_iMessageNews {
+  umbrella header "Pods-iMessageNews-umbrella.h"
+
+  export *
+  module * { export * }
+}

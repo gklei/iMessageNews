@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C5DBF39E8DC6B8B7445D810 /* Pods_MessagesExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E9CFDEA4208DC03E9DF70CE /* Pods_MessagesExtension.framework */; };
+		BD6FFCA71083C3848ACC8406 /* Pods_iMessageNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34FC5DB689491C636D561894 /* Pods_iMessageNews.framework */; };
 		CE48A12C1DADE0C2002B7B2F /* RSSFeedItemsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE48A12B1DADE0C2002B7B2F /* RSSFeedItemsLayout.swift */; };
 		CE48A1321DADE188002B7B2F /* RSSFeedInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE48A1311DADE188002B7B2F /* RSSFeedInfo.swift */; };
 		CE48A1341DADE1C5002B7B2F /* RSSFeedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE48A1331DADE1C5002B7B2F /* RSSFeedCache.swift */; };
@@ -29,7 +30,6 @@
 		CE93A2721DA9929200FBE812 /* RSSFeedItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93A2701DA9929200FBE812 /* RSSFeedItemCell.swift */; };
 		CE93A2731DA9929200FBE812 /* RSSFeedItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE93A2711DA9929200FBE812 /* RSSFeedItemCell.xib */; };
 		CEAEE4141DAEC7BF005B6C94 /* MSMessage+RSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAEE4131DAEC7BF005B6C94 /* MSMessage+RSS.swift */; };
-		E8C772B945F4761B37D20196 /* Pods_RSSMessage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D5F44CC794E232E8F38D6B /* Pods_RSSMessage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,9 +58,10 @@
 
 /* Begin PBXFileReference section */
 		10D5F44CC794E232E8F38D6B /* Pods_RSSMessage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSSMessage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		464393577D69A6249B7E5026 /* Pods-RSSMessage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSSMessage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSSMessage/Pods-RSSMessage.debug.xcconfig"; sourceTree = "<group>"; };
+		34FC5DB689491C636D561894 /* Pods_iMessageNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMessageNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B49E796AFE24CC3CEC4A39D /* Pods-iMessageNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMessageNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-iMessageNews/Pods-iMessageNews.release.xcconfig"; sourceTree = "<group>"; };
 		4E9CFDEA4208DC03E9DF70CE /* Pods_MessagesExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessagesExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9FC12D7B79EC91EE07617A3D /* Pods-RSSMessage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSSMessage.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSSMessage/Pods-RSSMessage.release.xcconfig"; sourceTree = "<group>"; };
+		B5D048F2E0EE0522B8D2FEA8 /* Pods-iMessageNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMessageNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iMessageNews/Pods-iMessageNews.debug.xcconfig"; sourceTree = "<group>"; };
 		BE249B642FE7A22A9A982E26 /* Pods-MessagesExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessagesExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-MessagesExtension/Pods-MessagesExtension.release.xcconfig"; sourceTree = "<group>"; };
 		CE48A12B1DADE0C2002B7B2F /* RSSFeedItemsLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSFeedItemsLayout.swift; sourceTree = "<group>"; };
 		CE48A1311DADE188002B7B2F /* RSSFeedInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSFeedInfo.swift; sourceTree = "<group>"; };
@@ -69,7 +70,7 @@
 		CE48A1371DADEB33002B7B2F /* BackToTopicsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackToTopicsCell.swift; sourceTree = "<group>"; };
 		CE48A1381DADEB33002B7B2F /* BackToTopicsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackToTopicsCell.xib; sourceTree = "<group>"; };
 		CE48A13B1DAEBF96002B7B2F /* SubtleShadowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtleShadowCell.swift; sourceTree = "<group>"; };
-		CE67DD681DA6C7BE00F86634 /* RSSMessage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSMessage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE67DD681DA6C7BE00F86634 /* iMessageNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMessageNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE67DD6B1DA6C7BE00F86634 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE67DD6D1DA6C7BE00F86634 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE67DD721DA6C7BE00F86634 /* MessagesExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MessagesExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,7 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8C772B945F4761B37D20196 /* Pods_RSSMessage.framework in Frameworks */,
+				BD6FFCA71083C3848ACC8406 /* Pods_iMessageNews.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,8 +116,8 @@
 			children = (
 				DCABB0C757840D783E0BBB1E /* Pods-MessagesExtension.debug.xcconfig */,
 				BE249B642FE7A22A9A982E26 /* Pods-MessagesExtension.release.xcconfig */,
-				464393577D69A6249B7E5026 /* Pods-RSSMessage.debug.xcconfig */,
-				9FC12D7B79EC91EE07617A3D /* Pods-RSSMessage.release.xcconfig */,
+				B5D048F2E0EE0522B8D2FEA8 /* Pods-iMessageNews.debug.xcconfig */,
+				4B49E796AFE24CC3CEC4A39D /* Pods-iMessageNews.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -176,7 +177,7 @@
 		CE67DD611DA6C7BE00F86634 = {
 			isa = PBXGroup;
 			children = (
-				CE67DD6A1DA6C7BE00F86634 /* RSSMessage */,
+				CE67DD6A1DA6C7BE00F86634 /* iMessage News */,
 				CE67DD791DA6C7BE00F86634 /* MessagesExtension */,
 				CE67DD761DA6C7BE00F86634 /* Frameworks */,
 				CE67DD691DA6C7BE00F86634 /* Products */,
@@ -187,18 +188,19 @@
 		CE67DD691DA6C7BE00F86634 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CE67DD681DA6C7BE00F86634 /* RSSMessage.app */,
+				CE67DD681DA6C7BE00F86634 /* iMessageNews.app */,
 				CE67DD721DA6C7BE00F86634 /* MessagesExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CE67DD6A1DA6C7BE00F86634 /* RSSMessage */ = {
+		CE67DD6A1DA6C7BE00F86634 /* iMessage News */ = {
 			isa = PBXGroup;
 			children = (
 				CE67DD6B1DA6C7BE00F86634 /* Assets.xcassets */,
 				CE67DD6D1DA6C7BE00F86634 /* Info.plist */,
 			);
+			name = "iMessage News";
 			path = RSSMessage;
 			sourceTree = "<group>";
 		};
@@ -208,6 +210,7 @@
 				CE67DD771DA6C7BE00F86634 /* Messages.framework */,
 				4E9CFDEA4208DC03E9DF70CE /* Pods_MessagesExtension.framework */,
 				10D5F44CC794E232E8F38D6B /* Pods_RSSMessage.framework */,
+				34FC5DB689491C636D561894 /* Pods_iMessageNews.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -229,24 +232,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CE67DD671DA6C7BE00F86634 /* RSSMessage */ = {
+		CE67DD671DA6C7BE00F86634 /* iMessageNews */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE67DD881DA6C7BE00F86634 /* Build configuration list for PBXNativeTarget "RSSMessage" */;
+			buildConfigurationList = CE67DD881DA6C7BE00F86634 /* Build configuration list for PBXNativeTarget "iMessageNews" */;
 			buildPhases = (
 				6475240E4DF1E8BB99BF572F /* [CP] Check Pods Manifest.lock */,
 				CE67DD661DA6C7BE00F86634 /* Resources */,
 				CE67DD871DA6C7BE00F86634 /* Embed App Extensions */,
 				DA20A4AE8ADFA12CC65A3DAD /* Frameworks */,
 				F3455B9D73CD94EA73CF67D7 /* [CP] Copy Pods Resources */,
+				08ACA61F9AD06C206CDC5F01 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				CE67DD751DA6C7BE00F86634 /* PBXTargetDependency */,
 			);
-			name = RSSMessage;
+			name = iMessageNews;
 			productName = RSSMessage;
-			productReference = CE67DD681DA6C7BE00F86634 /* RSSMessage.app */;
+			productReference = CE67DD681DA6C7BE00F86634 /* iMessageNews.app */;
 			productType = "com.apple.product-type.application.messages";
 		};
 		CE67DD711DA6C7BE00F86634 /* MessagesExtension */ = {
@@ -258,7 +262,6 @@
 				CE67DD6F1DA6C7BE00F86634 /* Frameworks */,
 				CE67DD701DA6C7BE00F86634 /* Resources */,
 				D9844954B8F461A50FCFB3EB /* [CP] Copy Pods Resources */,
-				7DE32954E220010BBBFE204F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -291,7 +294,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CE67DD651DA6C7BE00F86634 /* Build configuration list for PBXProject "RSSMessage" */;
+			buildConfigurationList = CE67DD651DA6C7BE00F86634 /* Build configuration list for PBXProject "iMessageNews" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -304,7 +307,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CE67DD671DA6C7BE00F86634 /* RSSMessage */,
+				CE67DD671DA6C7BE00F86634 /* iMessageNews */,
 				CE67DD711DA6C7BE00F86634 /* MessagesExtension */,
 			);
 		};
@@ -334,6 +337,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		08ACA61F9AD06C206CDC5F01 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iMessageNews/Pods-iMessageNews-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6475240E4DF1E8BB99BF572F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -347,21 +365,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		7DE32954E220010BBBFE204F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MessagesExtension/Pods-MessagesExtension-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C192B9E935FA7077FCFA3333 /* [CP] Check Pods Manifest.lock */ = {
@@ -406,7 +409,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RSSMessage/Pods-RSSMessage-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iMessageNews/Pods-iMessageNews-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -549,11 +552,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DCABB0C757840D783E0BBB1E /* Pods-MessagesExtension.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				DEVELOPMENT_TEAM = 49BYD5B64K;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
 				INFOPLIST_FILE = MessagesExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.incipia.RSSMessage.MessagesExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.incipia.imessagenews.MessagesExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -564,11 +569,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BE249B642FE7A22A9A982E26 /* Pods-MessagesExtension.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				DEVELOPMENT_TEAM = 49BYD5B64K;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
 				INFOPLIST_FILE = MessagesExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.incipia.RSSMessage.MessagesExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.incipia.imessagenews.MessagesExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -577,13 +584,14 @@
 		};
 		CE67DD891DA6C7BE00F86634 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 464393577D69A6249B7E5026 /* Pods-RSSMessage.debug.xcconfig */;
+			baseConfigurationReference = B5D048F2E0EE0522B8D2FEA8 /* Pods-iMessageNews.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 49BYD5B64K;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
 				INFOPLIST_FILE = RSSMessage/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.incipia.RSSMessage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.incipia.imessagenews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -592,13 +600,14 @@
 		};
 		CE67DD8A1DA6C7BE00F86634 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9FC12D7B79EC91EE07617A3D /* Pods-RSSMessage.release.xcconfig */;
+			baseConfigurationReference = 4B49E796AFE24CC3CEC4A39D /* Pods-iMessageNews.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 49BYD5B64K;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
 				INFOPLIST_FILE = RSSMessage/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.incipia.RSSMessage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.incipia.imessagenews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -608,7 +617,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CE67DD651DA6C7BE00F86634 /* Build configuration list for PBXProject "RSSMessage" */ = {
+		CE67DD651DA6C7BE00F86634 /* Build configuration list for PBXProject "iMessageNews" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE67DD821DA6C7BE00F86634 /* Debug */,
@@ -626,7 +635,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE67DD881DA6C7BE00F86634 /* Build configuration list for PBXNativeTarget "RSSMessage" */ = {
+		CE67DD881DA6C7BE00F86634 /* Build configuration list for PBXNativeTarget "iMessageNews" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE67DD891DA6C7BE00F86634 /* Debug */,

@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/gregoryklein/Projects/incipia/iMessage/RSSMessage/iMessageNews.xcodeproj">
+      location = "group:iMessageNews.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

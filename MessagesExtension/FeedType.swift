@@ -19,10 +19,10 @@ extension FeedType {
 		switch self {
 		case .tech: return "https://www.wired.com/category/gear/feed/"
 		case .news: return "http://rss.nytimes.com/services/xml/rss/nyt/US.xml"
-		case .sports: return "http://rss.nytimes.com/services/xml/rss/nyt/Sports.xml"
+		case .sports: return "http://www.espn.com/espn/rss/news"
 		case .politics: return "http://www.politico.com/rss/politicopicks.xml"
-		case .business: return "http://rss.nytimes.com/services/xml/rss/nyt/Business.xml"
-		case .humor: return "http://www.huffingtonpost.com/feeds/verticals/comedy/index.xml"
+		case .business: return  "http://www.wsj.com/xml/rss/3_7014.xml"
+		case .humor: return "http://www.newyorker.com/feed/humor"
 		}
 	}
 	
